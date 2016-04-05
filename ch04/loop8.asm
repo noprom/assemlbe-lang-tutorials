@@ -12,5 +12,9 @@ code segment
 s:mov [bx], bl
   inc bx
   loop s
+
+  ;;程序返回
+  mov ax, 4c00h
+  int 21h
 code ends
 end
