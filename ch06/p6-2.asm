@@ -10,8 +10,8 @@ codesg segment
                             ;;这16个字的内存空间,存放这16个数据,后面利用这段空间当做栈来使用
 ;;程序开始
 start: mov ax, cs
-       mov ss, ax
-       mov sp, 30h          ;;设置栈顶ss:sp指向cs:30
+       mov ss, ax           ;;在这里我们使用cs:10~cs:2F的空间作为栈来使用
+       mov sp, 30h          ;;设置栈顶ss:sp指向cs:30,首先应该指向栈底
 
        mov bx, 0
        mov cx, 8
