@@ -15,7 +15,7 @@ code segment
   mov cx, 12        ;;循环12次
 
 s:mov dl, [bx]      ;;(dl) = ((ds)*16+(bx)),将ffffh:bx中的数据送入dl
-  mov es:[bx], dl    ;;((es)*16+(bx))=(dl),将dl中的数据送入00:bx
+  mov es:[bx], dl   ;;((es)*16+(bx))=(dl),将dl中的数据送入00:bx
   inc bx            ;;(bx) = (bx) + 1
   loop s
 
