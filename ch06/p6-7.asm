@@ -1,18 +1,16 @@
 ;; Author: noprom <tyee.noprom@qq.com>
-;; Data: 2016/4/6 10:29AM
-;; Title: 实验五(1):编写调试具有多个段的程序
+;; Data: 2016/4/6 12:07PM
+;; Title: 实验五(2):编写调试具有多个段的程序
 
 assume cs: code, ds: data, ss: stack
 ;数据段
 data segment
-  dw 0123h, 0456h, 0789h, 0abch, 0defh, 0fedh, 0cbah, 0987h
+  dw 0123h, 0456h
 data ends
-
 ;栈段
 stack segment
-  dw 0, 0, 0, 0, 0, 0, 0, 0
+  dw 0, 0
 stack ends
-
 ;代码段
 code segment
   start: mov ax, stack
