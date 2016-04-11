@@ -11,6 +11,21 @@ b segment
 b ends
 code segment
 start:
-  
+  mov ax, a
+  mov ds, ax
+
+  mov ax, b
+  mov ss, ax
+  mov sp, 10h
+
+  mov bx, 0h
+  mov cx, 8
+
+s:push ds:[bx]
+  add bx, 2
+  loop s
+
+  mov ax, 4c00h
+  int 21h
 code ends
 end start
