@@ -16,6 +16,7 @@ start:
   mov cx, 5
 s:mov al, [bx]
   and al, 11011111B       ;第五位变为0,转化为大写
+  mov [bx], al            ;替换原来的内容
   inc bx
   loop s
 
@@ -23,6 +24,7 @@ s:mov al, [bx]
   mov cx, 11
 p:mov al, [bx]
   or al, 00100000B        ;第五位变为1,转化为小写
+  mov [bx], al            ;替换原来的内容
   inc bx
   loop p
 
