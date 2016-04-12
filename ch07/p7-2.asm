@@ -3,6 +3,8 @@
 ;; Title: 程序7.2:将datasg中第一个字符串转化为大写,第二个字符串转化为小写
 assume cs: codesg, ds: datasg
 datasg segment
+  db 'BaSiC'
+  db 'iNfOrMaTiOn'
 datasg ends
 
 codesg segment
